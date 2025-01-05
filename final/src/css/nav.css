@@ -1,0 +1,40 @@
+/* Navbar Styles */
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(40, 59, 93, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Space Mono', monospace;
+  }
+  
+  #companyName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightcoral;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  #Enterance {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  #Enterance a {
+    font-size: 1rem;
+    color: lightgoldenrodyellow;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #Enterance a:hover {
+    background-color: lightgoldenrodyellow;
+    color: lightcoral;
+    transform: scale(1.1);
+  }
+  

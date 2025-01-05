@@ -1,0 +1,11 @@
+#diaryNav{
+    display:flex;
+    flex-direction: column;
+    column-gap: 100px   ;
+}
+#diaryContainer{
+    border-style: solid;
+    border: 1cap;
+    border-color:black ;
+    background-color: rgb(204, 35, 114);
+}
