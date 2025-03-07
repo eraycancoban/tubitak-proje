@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from deepface import DeepFace
 from transformers import pipeline
-from googletrans import Translator
+from deep_translator import GoogleTranslator  # Changed this line
 from flask_cors import CORS  
 import base64
 from io import BytesIO
@@ -10,39 +10,23 @@ import cv2
 import numpy as np
 
 app = Flask(__name__)
-
 CORS(app)
 
 # Son analiz edilen dominant duygu (kamera üzerinden)
 dominant_emotion_global = {"emotion": None, "timestamp": None}
 
 # Çeviri için Translator oluştur
-translator = Translator()
-
-# Metin duygu analizi için model yükle
-classifier = pipeline(
-    task="text-classification",
-    model="SamLowe/roberta-base-go_emotions",
-    top_k=None,
-    device=0
-)
-
-# Suicidality analiz için pipeline ekle
-suicidality_classifier = pipeline(
-    task="text-classification",
-    model="sentinet/suicidality"
-)
-
+# Replace the translator initialization
+translator = GoogleTranslator(source='auto', target='en')
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
     data = request.json
     text = data.get('text', '')
 
-    # Metni İngilizceye çevir
-    translated = translator.translate(text, src='auto', dest='en').text
+    # Modified translation call
+    translated = translator.translate(text)
 
-    # Çevrilen metni analiz et
     outputs = classifier([translated])
     return jsonify({
         "original_text": text,
@@ -54,9 +38,10 @@ def analyze():
 def suicidality_analysis():
     data = request.json
     text = data.get('text', '')
-    translated = translator.translate(text, src='auto', dest='en').text
+    
+    # Modified translation call
+    translated = translator.translate(text)
 
-    # Suicidality analizini yap
     outputs = suicidality_classifier([translated])
     return jsonify({
         "original_text": text,
