@@ -1,0 +1,875 @@
+/* My Starter Template */
+
+
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  line-height: 1.6;
+  background: rgba(175, 238, 238, 0.3);
+  color: lightcoral;
+  padding: 0;
+}
+.admin-container {
+  padding: 2em;
+  background-color: #f5f5f5;
+}
+
+.user-group {
+  margin-bottom: 2em;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.user-card {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
+  text-align: center;
+}
+
+.user-card:hover {
+  background-color: #34495e;
+}
+
+.user-detail {
+  margin-top: 2em;
+  background-color: lightgoldenrodyellow;
+  padding: 1em;
+  border-radius: 8px;
+  width: 60%;
+  margin: 2em auto;
+}
+
+.user-detail h3 {
+  text-align: center;
+  color: #ff6f61;
+}
+
+.user-detail p {
+  font-size: 1.2rem;
+}
+
+.user-detail ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-detail ul li {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+/* Genel Sayfa Düzeni */
+body {
+  font-family: 'Space Mono', monospace;
+  background: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.diary-page {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s;
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar-content {
+  padding: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.sidebar-section {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.entry-date-picker {
+  width: 100%;
+  padding: 0.8em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-profile {
+  background: #ff6f61;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-profile:hover {
+  background-color: #ff856f;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  transition: margin-left 0.3s;
+}
+
+.sidebar.open ~ .main-content {
+  margin-left: 280px;
+}
+
+.menu-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.menu-btn:hover {
+  background: #ff856f;
+}
+
+/* Günlük Form ve Sonuçlar */
+.journal-section,
+.section-entry-results {
+  margin-top: 4em;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Kart Stili */
+.entry-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.entry-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  flex: 1 1 100%;
+}
+
+.entry-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.entry-text {
+  white-space: pre-wrap;
+}
+
+/* Global Typography */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+form,
+textarea {
+  font-size: 1rem;
+}
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 1em;
+  width: 100%;
+  max-width: 400px;
+}
+
+.entry-text-title {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+
+button {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: aquamarine;
+  color: #0a2472;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Section Container Positions, Spacing, Utilities */
+
+header {
+  text-align: center;
+  margin: 1em auto;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.camera-emotion {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.camera-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2dvh;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-height: 10px;
+}
+
+/* Button Standard */
+
+.btn-main,
+.btn-light,
+.btn-dark {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-end-chat {
+  background-color: #33353a; /* buton */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn-main {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: white;
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: lightgoldenrodyellow;
+  color: lightcoral;
+  font-weight: 700;
+  transform: scale(1.08);
+}
+
+/* Project Starts Here */
+
+/* Journal Entry Section */
+
+/* Title */
+
+.entry-text-title {
+  width: 20em;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 2px;
+  border: unset;
+  background-color: lightgoldenrodyellow;
+  font-family: 'Space Mono', monospace;
+}
+
+.entry-text-title:focus {
+  outline-color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  color: lightcoral;
+  font-size: 1rem;
+}
+
+.entry-text-title::placeholder {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.entry-text-title::-ms-value {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 2em auto;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chat-header {
+  background-color: lightcoral;
+  color: lightgoldenrodyellow;
+  padding: 1em;
+  text-align: center;
+}
+
+.chat-messages {
+  padding: 1em;
+  overflow-y: auto;
+height: 400px;
+}
+
+.message {
+  margin: 0.5em 0;
+  padding: 0.8em;
+  border-radius: 5px;
+  max-width: 75%;
+}
+
+.bot-message {
+  background-color: lightcoral;
+  align-self: flex-end;
+  color: #0a2472;
+}
+
+.user-message {
+  background-color: lightgoldenrodyellow;
+  align-self: flex-start;
+  color: lightcoral;
+}
+
+/* Existing chat-input style update */
+.chat-input {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.9);
+  gap: 10px; /* Adds consistent spacing between input and button */
+}
+
+.chat-input input {
+  flex: 0 1 70%; /* Take up 70% of available space but don't grow beyond content */
+  max-width: 400px; /* Limit maximum width */
+  margin-right: 0;
+}
+
+.send-button {
+  background-color: #4e607a;
+  padding: 8px 15px;
+  font-size: 14px;
+  max-width: 12dvh;
+  max-height: 5dvh;
+  flex: 0 0 auto; /* Don't grow or shrink */
+}
+
+/* Text Box */
+
+.container-row-journal {
+  display: flex;
+  justify-content: center;
+}
+
+.entry-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.journal-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.entry-text-box {
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+@media (min-width: 769px) {
+  .entry-text-box {
+    width: 40em;
+    height: 20em;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 2px;
+    border: unset;
+    background-color: lightgoldenrodyellow;
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+.entry-text-box:focus {
+  outline-color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  color: lightcoral;
+  font-size: 1rem;
+}
+
+.entry-text-box::placeholder {
+  color: lightcoral;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.entry-submit-btn {
+  margin: 0;
+  background-color: #4e607a;
+}
+
+/* Journal Results Section */
+
+.sectionEntryResults {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.entryResultRow {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin: 1em auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.single-entry-div {
+  max-width: 100%;
+
+  margin: 1em auto;
+  padding: 1em 1em;
+}
+
+.single-entry-date {
+  background-color: lightgoldenrodyellow;
+  width: 100%;
+}
+
+.heading-results {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: lightgoldenrodyellow;
+}
+
+/* Timeline Section */
+.section-timeline {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.timeline-controls {
+  margin: 1em auto;
+}
+
+.datepicker {
+  padding: 0.5em;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid lightcoral;
+}
+
+.timeline {
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid lightcoral;
+  border-radius: 8px;
+  background: rgba(175, 238, 238, 0.3);
+}
+
+.timeline-item {
+  padding: 1em;
+  border-bottom: 1px solid lightcoral;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+
+/* Container */
+.personel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1em;
+  
+}
+
+.personel-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  max-width: 500px;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: lightcoral;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.info p {
+  font-size: 1rem;
+  margin: 0.5em 0;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  margin-top: 1.5em;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Form Stilleri */
+.password-form {
+  margin-top: 1em;
+}
+
+.form-group {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  color: #333;
+}
+
+input {
+  padding: 0.8em;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: lightcoral;
+}
+
+/* Menü butonu ve başlık için yeni stil */
+.journal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title {
+  margin: 0;
+  display: inline-block;
+}
+
+.menu-btn {
+  background: lightcoral; /* Diary yazısının rengi ile eşleştir */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-btn:hover {
+  background: #ff856f; /* Hover rengi */
+}
+
+/* Kamera butonları için yeni stil */
+.camera-emotion {
+  display: flex;
+  justify-content: center; /* Butonları ortala */
+  margin-bottom: 1rem;
+  gap: 1rem; /* Butonlar arası boşluk */
+}
+
+.btn-light, .btn-dark {
+  min-width: 150px; /* Butonlara sabit genişlik */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .camera-emotion {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-light, .btn-dark {
+    width: 80%;
+    margin: 0.25rem 0;
+  }
+  
+  .menu-btn {
+    position: static;
+    transform: none;
+    margin-left: 1rem;
+  }
+  
+  .journal-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* Responsive tasarım için medya sorguları */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+  
+  .entry-form {
+    padding: 1rem;
+  }
+  
+  .entry-text-box {
+    min-height: 150px;
+  }
+  
+  .camera-emotion {
+    flex-direction: column;
+  }
+  
+  .btn-light, .btn-dark {
+    margin: 0.25rem 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .entry-card {
+    flex: 1 1 48%;
+  }
+  
+  .camera-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-content {
+    padding: 2rem;
+  }
+  
+  .entry-card {
+    flex: 1 1 31%;
+  }
+  
+  .entry-results {
+    justify-content: flex-start;
+  }
+}
+
+/* Tüm ekran boyutları için taşma kontrolü */
+* {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Kamera gizli olduğunda da alan tutma */
+.camera-container {
+  min-height: 10px;
+}
+
+/* Form hata mesajı stilleri */
+.message {
+  padding: 0.75rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  background-color: #f8d7da;
+  color: #721c24;
+  text-align: center;
+}
+
+/* Yeni Navbar Stili */
+.diary-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.navbar-title {
+  margin: 0;
+  color: lightcoral;
+  font-size: 2rem;
+}
+
+.menu-btn {
+  background: lightcoral;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.menu-btn:hover {
+  background: #ff856f;
+}
+
+/* Responsive navbar için */
+@media (max-width: 768px) {
+  .diary-navbar {
+    padding: 1rem;
+  }
+  
+  .navbar-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Eski journal-header stilini kaldırabilirsiniz */
+
+.send-button {
+  background-color: #4e607a;
+  padding: 8px 15px;
+  font-size: 14px;
+  max-width: 12dvh;
+  max-height: 5dvh;
+}
+
